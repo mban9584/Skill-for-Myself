@@ -7,7 +7,7 @@
 出口机可以使用 RFC 在香港和日本的任意机器。考虑现在 rfc 落地机溢价高 的情况，直接使用 rfc jpco / jpco lite 也是不错的选择。
 
 搭建代理协议这块我就不多说了，搭一个 ss2022 即可（方案很多，用自己习惯的就行）。没弄过的可以用下面的脚本：
-curl -L https://github.com/mban9584/Skill-for-Myself/blob/main/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
+curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
 
 第一次使用：
 先选 选项1：安装 nftables，并自动开启 bbr 和 ipv4 端口转发。
@@ -42,7 +42,7 @@ curl -L https://github.com/mban9584/Skill-for-Myself/blob/main/nftables.sh -o nf
 po0 只能与 rfc 港日机通过腾讯云 CCN 内网专线互联，所以这里我们用 与出口机同地区 的港/日 rfc 机器作为中转。
 
 同样下载脚本并用 选项1 安装并初始化 nftables 配置。
-curl -L https://github.com/mban9584/Skill-for-Myself/blob/main/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
+curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
 
 然后按之前方式配置端口转发：目标指向 落地机 IP + ss 端口。
 
