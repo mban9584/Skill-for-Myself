@@ -2,6 +2,9 @@
 ## SS协议
 一个 shadowsocks-rust 2022 一键安装脚本
 bash <(curl -sL https://raw.githubusercontent.com/mban9584/Skill-for-Myself/refs/heads/main/ss2022install.sh)
+或者
+bash <(curl -sL "https://raw.githubusercontent.com/mban9584/Skill-for-Myself/refs/heads/main/ss2022install.sh")
+
 
 自用的各种工具
 ## po0dd.sh 一键 DD（VPS 无法访问 GitHub 时的安装方法）
