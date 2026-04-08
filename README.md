@@ -4,7 +4,7 @@
 bash <(curl -sL https://raw.githubusercontent.com/mban9584/Skill-for-Myself/refs/heads/main/ss2022install.sh)
 
 自用的各种工具
-po0dd.sh 一键 DD（VPS 无法访问 GitHub 时的安装方法）
+## po0dd.sh 一键 DD（VPS 无法访问 GitHub 时的安装方法）
 本说明仅介绍 “VPS 不能访问 GitHub” 时，如何安装并使用 po0dd.sh 脚本一键重装为 Debian 12 (bookworm)。
 
 ⚠️ 警告：po0dd.sh 会整盘重装系统盘（如 /dev/vda、/dev/sda 等），所有数据会被清空且无法恢复，请务必提前备份。
@@ -205,7 +205,7 @@ chmod +x po0dd.sh
 
 
 
-关于转发
+## 关于转发
 PortChannel Zero (Po0 腾讯云) — 从开机到配置 nftables 专线转发全流程教程（小白向）
 前言：关于 Po0
 Po0（PortChannel Zero）是RFC陈总推出的广州、上海腾讯云CCN服务器。可利用 腾讯云 CCN（云联网） 与 RFCHOST T1 的内网互通，搭建 低延迟、高稳定性 的商业级专线，中转流量至 RFCHOST 落地机。
