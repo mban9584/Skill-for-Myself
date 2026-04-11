@@ -1,6 +1,9 @@
 最近看到不少新手买了 po0 之后卡在端口转发配置问题，配半天也搞不定。
 于是我直接用 claude 搓了一个交互式管理 nftables 端口转发的一键脚本，欢迎大家试用。
 （来源：https://www.nodeseek.com/post-616160-1）
+作者脚本：
+curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
+
 使用教程
 
 ## 1. 出口机搭建代理协议
@@ -12,7 +15,8 @@ curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftable
 通过以下指令直接下载并运行脚本：
 curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
 
-(https://cdn.nodeimage.com/i/QPArLdaTSFIzbRhttJY3gTCnPj3bDvGP.webp)
+<img width="551" height="358" alt="image" src="https://github.com/user-attachments/assets/eec6af57-d599-476e-8d89-4f5436982ca5" />
+
 
 第一次使用：
 先选 选项1：安装 nftables，并自动开启 bbr 和 ipv4 端口转发。
@@ -23,7 +27,8 @@ curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./n
 配置端口转发：
 准备工作完成后，即可通过 选项3 和 选项4 增减端口转发配置：
 
-[转发图](https://cdn.nodeimage.com/i/PNEMbeiOozAH1srZxd4XFcPPb7okXlbu.webp)
+<img width="665" height="640" alt="image" src="https://github.com/user-attachments/assets/c94a6fd9-55bf-4e18-8737-27bd26d01af2" />
+
 
 按提示输入：
 
