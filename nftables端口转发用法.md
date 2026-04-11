@@ -22,7 +22,9 @@ curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./n
 
 配置端口转发：
 准备工作完成后，即可通过 选项3 和 选项4 增减端口转发配置：
+
 [转发图](https://cdn.nodeimage.com/i/PNEMbeiOozAH1srZxd4XFcPPb7okXlbu.webp)
+
 按提示输入：
 
 在 po0 上监听的端口
@@ -34,17 +36,17 @@ curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./n
 
 
 ————————————————
-多层转发配置教程
+## 3.0多层转发配置教程
 ————————————————
 今天还有几个老哥遇到的问题是：搞不懂怎么 多中转一次，用自备落地机作为出口。下面简单写一下步骤。
 
-链路结构：客户端 → po0 → rfc 中转机 → 落地机（出口）
+链路结构：**客户端 → po0 → rfc 中转机 → 落地机（出口）**
 
-1. 落地机搭建代理协议
+#### 1. 落地机搭建代理协议
 参考上面的方式，这次把代理协议搭在 自备落地机 上。
 同样记录：ss 链接、本机 IP、ss 端口。
 
-2. rfc 中转机配置 nftables
+#### 2. rfc 中转机配置 nftables
 po0 只能与 rfc 港日机通过腾讯云 CCN 内网专线互联，所以这里我们用 与出口机同地区 的港/日 rfc 机器作为中转。
 
 同样下载脚本并用 选项1 安装并初始化 nftables 配置。
@@ -54,10 +56,12 @@ curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftable
 
 配置写入后，可以先把 ss 链接中的 IP 和端口替换为 rfc 中转机的 IP 和端口 做连通性测试。
 如果不是中国线路优化机，这一步延迟会比较高，属于正常现象。
+<img width="702" height="647" alt="image" src="https://github.com/user-attachments/assets/38f613f6-6f03-44ce-827c-853525be555b" />
 
 
-3. po0 配置 nftables
+#### 3. po0 配置 nftables
 然后进入 po0，重复一遍之前步骤：下载脚本、安装、配置端口转发。
+<img width="716" height="652" alt="image" src="https://github.com/user-attachments/assets/c3d7b206-2e6b-4664-b80f-dbc2c2fabb33" />
 
 这里填入的是 rfc 中转机的 IP 和端口。为了方便记忆，建议 po0 使用和中转机 相同的端口。
 
