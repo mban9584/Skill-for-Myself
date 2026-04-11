@@ -11,7 +11,9 @@ curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftable
 ## 2. 境内腾讯云 po0 配置端口转发
 通过以下指令直接下载并运行脚本：
 curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
+
 (https://cdn.nodeimage.com/i/QPArLdaTSFIzbRhttJY3gTCnPj3bDvGP.webp)
+
 第一次使用：
 先选 选项1：安装 nftables，并自动开启 bbr 和 ipv4 端口转发。
 
@@ -20,6 +22,7 @@ curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./n
 
 配置端口转发：
 准备工作完成后，即可通过 选项3 和 选项4 增减端口转发配置：
+[转发图](https://cdn.nodeimage.com/i/PNEMbeiOozAH1srZxd4XFcPPb7okXlbu.webp)
 按提示输入：
 
 在 po0 上监听的端口
