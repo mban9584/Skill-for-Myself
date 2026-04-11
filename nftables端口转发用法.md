@@ -3,12 +3,15 @@
 （来源：https://www.nodeseek.com/post-616160-1）
 使用教程
 
-1. 出口机搭建代理协议
+## 1. 出口机搭建代理协议
 出口机可以使用 RFC 在香港和日本的任意机器。考虑现在 rfc 落地机溢价高 的情况，直接使用 rfc jpco / jpco lite 也是不错的选择。
 
 搭建代理协议这块我就不多说了，搭一个 ss2022 即可（方案很多，用自己习惯的就行）。没弄过的可以用下面的脚本：
 curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
-
+## 2. 境内腾讯云 po0 配置端口转发
+通过以下指令直接下载并运行脚本：
+curl -L http://script.gu.ax:2052/nftables.sh -o nft.sh && chmod +x nft.sh && ./nft.sh
+(https://cdn.nodeimage.com/i/QPArLdaTSFIzbRhttJY3gTCnPj3bDvGP.webp)
 第一次使用：
 先选 选项1：安装 nftables，并自动开启 bbr 和 ipv4 端口转发。
 
