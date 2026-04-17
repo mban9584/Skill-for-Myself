@@ -75,3 +75,6 @@ curl -L https://github.com/mban9584/Skill-for-Myself/raw/refs/heads/main/nftable
 
 后续维护
 后续需要增减端口转发配置，都可以直接用脚本菜单操作，不再需要手动改 nftables 配置，避免出现冲突。
+./nft.sh
+
+
